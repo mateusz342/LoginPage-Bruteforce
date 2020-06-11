@@ -1,2 +1,2 @@
 # LoginPage-Bruteforce
-Script to bruteforce login page with POST REQUESTS useus usernames and passwords files.
+Script to bruteforce login page with POST REQUEST useus usernames and passwords files.
